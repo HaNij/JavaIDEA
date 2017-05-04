@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" rotate="0.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.huni.javafx.fxml.Controller">
+  <children>
+    <TextField layoutX="177.0" layoutY="181.0" prefWidth="132.0" text="Type name" fx:id="nameField"/>
+    <Button layoutX="309.0" layoutY="272.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="OK" onAction="#GoToHell" fx:id="okButton"/>
+    <Label layoutX="199.0" layoutY="75.0" prefHeight="23.0" prefWidth="89.0" text="Hello world" textAlignment="LEFT" textOverrun="CLIP" underline="false">
+      <font>
+        <Font name="Comic Sans MS" size="16.0" />
+      </font>
+    </Label>
+    <TextField layoutX="177.0" layoutY="222.0" prefWidth="132.0" text="How old are you?" fx:id="oldField" />
+  </children>
+  <padding>
+    <Insets bottom="30.0" left="40.0" right="10.0" top="25.0" />
+  </padding>
+</AnchorPane>
