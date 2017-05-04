@@ -1,21 +1,16 @@
 package com.huni.javafx.GEN_PASSWORD;
-import java.util.Random;
 
-public class Main {
-    private static final String numbers = "0123456789";
 
-    private static String generatePassword(int count) {
-        String out = "";
-        Random rand = new Random();
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-        for (int i = 0; i < count; i++) {
-            out += numbers.charAt(rand.nextInt(numbers.length()));
-        }
+public class Main extends Application {
+    public static void main(String[] args) { launch(args); }
 
-        return out;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(generatePassword(12));
+    public void start(Stage stage) {
+        Controller controller = new Controller();
+        stage.setScene(new Scene(controller.getRoot()));
+        stage.show();
     }
 }
