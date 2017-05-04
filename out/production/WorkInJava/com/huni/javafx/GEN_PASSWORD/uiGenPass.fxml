@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.9998779296875" prefWidth="390.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.huni.javafx.GEN_PASSWORD.MainController">
+  <children>
+    <TextField fx:id="field" layoutX="86.0" layoutY="188.0"  prefHeight="23.0001220703125" prefWidth="218.0" promptText="Нажмите кнопку" />
+    <Button fx:id="btn_generate" contentDisplay="CENTER" layoutX="79.0" layoutY="262.0" mnemonicParsing="false" prefHeight="22.000091552734375" prefWidth="232.0" text="СГЕНЕРИРОВАТЬ" textFill="BLACK">
+      <effect>
+        <InnerShadow color="GREY" height="35.16666666666667" radius="13.541666666666668" />
+      </effect>
+      <font>
+        <Font name="Impact" size="16.0" />
+      </font>
+    </Button>
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="113.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="/com/huni/javafx/GEN_PASSWORD/password.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="btn_settings" layoutX="283.0" layoutY="14.0" mnemonicParsing="false" prefWidth="93.0" text="Настройки" textAlignment="LEFT" textFill="BLACK">
+      <font>
+        <Font name="Courier New" size="12.0" />
+      </font>
+    </Button>
+  </children>
+</AnchorPane>
