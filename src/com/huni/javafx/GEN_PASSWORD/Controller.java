@@ -25,8 +25,15 @@ public class Controller {
 
     @FXML
     public void generateButton() {
+        generate();
+    }
+
+    public void generate() {
         Core core = new Core();
         field.setText(core.generatePassword(12));
+    }
+    public void onEnter() {
+        generate();
     }
 
 }
