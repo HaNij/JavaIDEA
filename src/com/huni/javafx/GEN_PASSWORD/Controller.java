@@ -4,8 +4,13 @@ package com.huni.javafx.GEN_PASSWORD;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
 
 public class Controller {
     @FXML
@@ -26,12 +31,29 @@ public class Controller {
     @FXML
     public void generateButton() {
         generate();
+        onClick();
     }
 
-    public void generate() {
+    public void onClick() {
+        Dialog dialog = new Dialog(Alert.AlertType.INFORMATION, "Пароль сохраняется в буфер обмена", ButtonType.OK);
+        dialog.setHeaderText(null);
+        dialog.setTitle("Сообщение");
+        if (!dialog.isShowed()) {
+            dialog.showDialog(dialog);
+        } else { return; }
+    }
+
+    private void generate() {
         Core core = new Core();
         field.setText(core.generatePassword(12));
+        copyToSystemClipboard(field.getText());
     }
+
+    private void copyToSystemClipboard(String str) {
+        StringSelection ss = new StringSelection(str);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+    }
+
     public void onEnter() {
         generate();
     }
