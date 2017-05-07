@@ -8,6 +8,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
@@ -17,6 +19,7 @@ public class Controller {
     public Button btn_generate;
     public TextField field;
     public Parent root;
+    public Button btn_settings;
 
     public Parent getRoot() {
         try {
@@ -38,6 +41,8 @@ public class Controller {
         Dialog dialog = new Dialog(Alert.AlertType.INFORMATION, "Пароль сохраняется в буфер обмена", ButtonType.OK);
         dialog.setHeaderText(null);
         dialog.setTitle("Сообщение");
+        Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow(); // Добавление иконки к диалогу;
+        stage.getIcons().add(new Image("https://cdn4.iconfinder.com/data/icons/flat-icon-set/128/key-icon.png"));
         if (!dialog.isShowed()) {
             dialog.showDialog(dialog);
         } else { return; }
