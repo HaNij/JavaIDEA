@@ -4,6 +4,7 @@ package com.huni.javafx.GEN_PASSWORD;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -20,6 +21,9 @@ public class Controller {
     public TextField field;
     public Parent root;
     public Button btn_settings;
+
+    public static Stage settings;
+    public static Parent rootSettings;
 
     public Parent getRoot() {
         try {
@@ -61,6 +65,17 @@ public class Controller {
 
     public void onEnter() {
         generate();
+    }
+
+    public void switchToSettings() {
+        try {
+        rootSettings = FXMLLoader.load(getClass().getResource("uiSettings.fxml"));
+        settings = new Stage();
+        settings.setScene(new Scene(rootSettings));
+        settings.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
