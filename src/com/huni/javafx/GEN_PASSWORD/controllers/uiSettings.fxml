@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" fx:id="root" fx:controller="com.huni.javafx.GEN_PASSWORD.SettingsController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="433.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane id="AnchorPane" fx:id="root" fx:controller="com.huni.javafx.GEN_PASSWORD.controllers.SettingsController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="433.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
   <children>
     <CheckBox fx:id="chb_b" layoutX="8.0" layoutY="70.0" mnemonicParsing="false" text="Большие латинские буквы" />
     <CheckBox fx:id="chb_s" layoutX="8.0" layoutY="102.0" mnemonicParsing="false" text="Маленькие латинские буквы" />

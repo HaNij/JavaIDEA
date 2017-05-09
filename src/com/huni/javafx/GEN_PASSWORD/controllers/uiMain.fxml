@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onEnter" prefHeight="333.9998779296875" prefWidth="390.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.huni.javafx.GEN_PASSWORD.Controller">
+<AnchorPane id="AnchorPane" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onEnter" prefHeight="333.9998779296875" prefWidth="390.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.huni.javafx.GEN_PASSWORD.controllers.MainController">
   <children>
     <TextField fx:id="field" layoutX="86.0" layoutY="188.0" onMouseClicked="#onClick" prefHeight="23.0001220703125" prefWidth="218.0" promptText="Нажмите кнопку" />
     <Button fx:id="btn_generate" contentDisplay="CENTER" layoutX="79.0" layoutY="262.0" mnemonicParsing="false" onAction="#generateButton" prefHeight="22.000091552734375" prefWidth="232.0" text="ГЕНЕРИРОВАТЬ" textFill="BLACK">
@@ -19,10 +19,10 @@
     </Button>
     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="113.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
       <image>
-        <Image url="@password.png" />
+        <Image url="@../password.png" />
       </image>
     </ImageView>
-    <Button layoutX="320.0" layoutY="14.0" mnemonicParsing="false" fx:id="btn_settings" onAction="#switchToSettings">
+    <Button layoutX="320.0" layoutY="14.0" mnemonicParsing="false" fx:id="btn_settings" onAction="#openSettings">
       <graphic>
         <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
           <image>

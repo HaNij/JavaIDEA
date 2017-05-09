@@ -1,6 +1,9 @@
-package com.huni.javafx.GEN_PASSWORD;
+package com.huni.javafx.GEN_PASSWORD.controllers;
 
 
+import com.huni.javafx.GEN_PASSWORD.Dialog;
+import com.huni.javafx.GEN_PASSWORD.Core;
+import com.huni.javafx.GEN_PASSWORD.Settings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,19 +18,16 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 
-public class Controller {
+public class MainController {
     @FXML
     public Button btn_generate;
     public TextField field;
     public Parent root;
     public Button btn_settings;
 
-    public static Stage settings;
-    public static Parent rootSettings;
-
     public Parent getRoot() {
         try {
-            root = FXMLLoader.load(getClass().getResource("uiGenPass.fxml"));
+            root = FXMLLoader.load(getClass().getResource("uiMain.fxml"));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,8 +53,7 @@ public class Controller {
     }
 
     private void generate() {
-        Core core = new Core();
-        field.setText(core.generatePassword(12));
+        field.setText(Core.generatePassword(12));
         copyToSystemClipboard(field.getText());
     }
 
@@ -67,12 +66,10 @@ public class Controller {
         generate();
     }
 
-    public void switchToSettings() {
+    public void openSettings() {
         try {
-        rootSettings = FXMLLoader.load(getClass().getResource("uiSettings.fxml"));
-        settings = new Stage();
-        settings.setScene(new Scene(rootSettings));
-        settings.show();
+            Settings settings = new Settings();
+            settings.start(Settings.getWindow());
         } catch (Exception e) {
             e.printStackTrace();
         }
